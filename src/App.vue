@@ -1,23 +1,29 @@
 <template>
-  <Game />
+  <div id="app">
+    <!-- <Game /> -->
+    <!-- <v-app> -->
+    <router-view>
+    </router-view>
+    <!-- </v-app> -->
+  </div>
 </template>
 
 
 <script>
-import Game from '@/components/Game'
+//import Game from '@/components/Game'
 export default {
   name: 'App',
-  components: { Game }
+  //components: { Game }
 }
 </script>
 
 
 <style lang="scss">
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
+// body {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 0;
+// }
 </style>
