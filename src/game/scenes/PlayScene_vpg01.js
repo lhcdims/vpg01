@@ -7,7 +7,8 @@ export default class PlayScene_vpg01 extends Scene {
   }
 
   create () {
-    this.add.image(400, 300, 'sky')
+    var imgSky = this.add.image(this.game.canvas.width / 2, this.game.canvas.height / 2, 'sky');
+    imgSky.setDisplaySize(this.game.canvas.width, this.game.canvas.height);
 
     const bomb = this.physics.add.image(400, 200, 'bomb')
     bomb.setCollideWorldBounds(true)

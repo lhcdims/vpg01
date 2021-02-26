@@ -7,7 +7,7 @@ function launch(containerId) {
   return new Phaser.Game({
     type: Phaser.AUTO,
     width: "100%",
-    height: "100%",
+    height: "97.5%",
     parent: containerId,
     physics: {
       default: 'arcade',

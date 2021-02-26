@@ -69,8 +69,6 @@ export default new Vuex.Store({
 
 
 
-
-
   },
   actions: {
     // Action for Get Server List
@@ -107,6 +105,9 @@ export default new Vuex.Store({
         this._vm.$funUpdateConsole("Socket.IO Connected", true);
         commit("setIntConnectSocketIO", 2);
         commit('setIntGotServerUrl', 2);
+
+        // After Connect to Server, we need to emit an event to the uni-app to tell it this External JS is loaded
+        this._vm.$socket.emit('FromExternalJsToUniapp', {"type": "StartGame", "strUserId": "sys             "});
         resolve();
       })
     },

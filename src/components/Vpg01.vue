@@ -17,10 +17,10 @@ export default {
     }
   },
   async mounted() {
-    const game = await import(/* webpackChunkName: "game" */ '@/game/vpg01')
-    this.bolDownloaded = true
+    const game = await import(/* webpackChunkName: "game" */ '@/game/vpg01');
+    this.bolDownloaded = true;
     this.$nextTick(() => {
-      this.gameInstance = game.launch(this.divContainerID)
+      this.gameInstance = game.launch(this.divContainerID);
     })
   },
   destroyed() {
