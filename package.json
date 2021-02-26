@@ -9,10 +9,13 @@
     "start": "serve dist"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.8.1",
+    "jsbase64": "^1.1.0",
     "phaser": "^3.50.0",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1",
+    "vue-socket.io": "^3.0.10",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
