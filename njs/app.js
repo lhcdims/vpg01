@@ -424,6 +424,8 @@ function funChildCreateServer_SocketListen() {
 
       // *** Send aryClients to All connection user ***
       // funSendAryClients();
+      global.socketAll.emit('Test',{'type': "Hello"});
+
 
       // Client request get coins
       socket.on("clientGetCoins", function (aryData) {
