@@ -403,6 +403,9 @@ function funChildCreateServer_SocketListen() {
   });
 
   // Attach socket.io to Redis
+  // ******** Important *********
+  // To use socket.io 2.x, must use socket.io-redis 5.x
+  // ******** Important End *************
   const redisAdapter = require('socket.io-redis');
   global.socketAll.adapter(redisAdapter({ host: config.redisHost, port: config.redisPort, password: config.redisPw}));
 
@@ -424,7 +427,7 @@ function funChildCreateServer_SocketListen() {
 
       // *** Send aryClients to All connection user ***
       // funSendAryClients();
-      global.socketAll.emit('Test',{'type': "Hello"});
+      global.socketAll.emit('test',{'type': "Hello"});
 
 
       // Client request get coins
